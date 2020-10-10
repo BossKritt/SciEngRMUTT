@@ -1,0 +1,62 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #A2D4FF;
+}
+
+.card{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img2{
+    right: 10px;
+    position: absolute;
+}
+
+.modal-content{
+    background: #47c9a2;
+}
+
+.modal-header, .modal-footer{
+    border: 0;
+}
+
+.modal-body{
+    text-align: center;
+    color: white;
+}
+
+.icon-modal-success{
+    font-size: 100px;
+}
+
+.col-md-6 .logo img{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.col-md-6 .imglogin img{
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-md-6 .imgscore img{
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-md-6 .imgwaiting img{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

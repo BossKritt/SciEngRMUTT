@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon -->
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link rel="icon" href="/img/dictionary.png" type="image/gif" sizes="16x16">
+
+    <title>SCI ENG RMUTT</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar sticky-top navbar-light bg-transparent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">
+                    Register
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="logo">
+                                    <a href="/index.html"><img src="/img/dictionary.png"></a>
+                                    <h6 style="text-align: center; margin-bottom: 30px;">SCI ENG RMUTT</h6>
+                                </div>
+
+                                <h3 style="text-align: center;">เข้าสู่ระบบ</h3><br>
+                                <div class="form-group">
+                                    <label>รหัสนักศึกษา</label>
+                                    <input type="text" class="form-control" id="UserID" placeholder="รหัสนักศึกษามีขีด">
+                                </div>
+                                <div class="form-group">
+                                    <label>รหัสผ่าน</label>
+                                    <input type="password" class="form-control" id="Password"><br>
+                                </div>
+                                <button type="button" onclick="LoginAlert()"
+                                    class="btn btn-primary btn-sm btn-block">ตกลง</button>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="imglogin">
+                                    <img src="/img/login.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script>
+        function LoginAlert() {
+            Swal.fire({
+                title: 'ยินดีด้วย!',
+                text: 'คุณเข้าสู่ระบบสำเร็จ',
+                icon: 'success',
+                confirmButtonText: 'ตกลง'
+            }).then((result) => {
+                if (result.value) {
+                    window.location.href = "score.html"
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

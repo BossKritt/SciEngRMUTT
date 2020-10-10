@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon -->
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link rel="icon" href="/img/dictionary.png" type="image/gif" sizes="16x16">
+
+    <title>SCI ENG RMUTT</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar sticky-top navbar-light bg-transparent">
+        <a class="navbar-brand" href="">
+            <img src="/img/dictionary.png" width="30" height="30" class="d-inline-block align-top" alt=""
+                loading="lazy">
+            SCI ENG RMUTT
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/login.html">
+                    Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <h5>กรุณากรอกข้อมูล</h5><br>
+                            <div class="form-row">
+                                <div class="input-group mb-3 col-md-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-id-badge"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="รหัสนักศึกษา (มีขีด)"
+                                        id="UserID">
+                                </div>
+                                <div class="input-group mb-3 col-md-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="ชื่อ" id="Name">
+                                </div>
+                                <div class="input-group mb-3 col-md-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="นามสกุล" id="Lastname">
+                                </div>
+                                <div class="input-group mb-3 col-md-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="อีเมล์" id="Email">
+                                </div>
+                                <div class="input-group mb-3 col-md-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="เบอร์โทร" id="Tel">
+                                </div>
+                                <div class="input-group mb-3 col-md-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="รหัสผ่าน" id="Password">
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-building"></i></span>
+                                </div>
+                                <select class="custom-select" id="Faculty">
+                                    <option selected>คณะ/สาขา</option>
+                                    <option value="1">วิทยาศาสตร์และเทคโนโลยี/คณิตศาสตร์</option>
+                                    <option value="2">วิทยาศาสตร์และเทคโนโลยี/เคมี</option>
+                                    <option value="3">วิทยาศาสตร์และเทคโนโลยี/สถิติประยุกต์</option>
+                                    <option value="4">วิทยาศาสตร์และเทคโนโลยี/ชีววิทยาประยุกต์</option>
+                                    <option value="5">วิทยาศาสตร์และเทคโนโลยี/วิทยาการคอมพิวเตอร์</option>
+                                    <option value="6">วิทยาศาสตร์และเทคโนโลยี/เทคโนโลยีสารสนเทศ</option>
+                                    <option value="7">วิทยาศาสตร์และเทคโนโลยี/การวิเคราะห์และจัดการข้อมูลขนาดใหญ่
+                                    </option>
+                                    <option value="8">วิทยาศาสตร์และเทคโนโลยี/ฟิสิกส์ประยุกต์</option>
+                                    <option value="9">วิทยาศาสตร์และเทคโนโลยี/วิทยาศาสตร์และการจัดการเทคโนโลยีอาหาร
+                                    </option>
+                                </select>
+                            </div>
+                            <button type="button" onclick="RegisAlert();" class="btn btn-primary btn-sm btn-block">
+                                ตกลง
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img2">
+                    <img src="/img/regis.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script>
+        function RegisAlert() {
+            Swal.fire({
+                title: 'ยินดีด้วย!',
+                text: 'การสมัครสมาชิกเสร็จสิ้น',
+                icon: 'success',
+                confirmButtonText: 'ตกลง'
+            }).then((result) => {
+                if (result.value) {
+                    window.location.href = "login.html"
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
