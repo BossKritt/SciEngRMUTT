@@ -25,7 +25,7 @@
     <nav class="navbar sticky-top navbar-light bg-white">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/score.html"><i class="fas fa-angle-left"></i>
+                <a class="nav-link" href="/waiting.html"><i class="fas fa-angle-left"></i>
                     Back
                 </a>
             </li>
@@ -50,77 +50,87 @@
                                     <a href="/index.html"><img src="/img/dictionary.png"></a>
                                     <h6 style="text-align: center; margin-bottom: 30px;">SCI ENG RMUTT</h6>
                                 </div>
-                                <h3 style="text-align: center;">รอผลการตรวจสอบ</h3><br>
+                                <h3 style="text-align: center;">แก้ไขข้อมูล</h3><br>
                                 <!-- StudentID -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">รหัสนักศึกษา</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="StudentID"
-                                            value="Student ID Test">
+                                        <input type="text" class="form-control" name="StudentID">
                                     </div>
                                 </div>
                                 <!-- Name -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">ชื่อ</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Name"
-                                            value="Name Test">
+                                        <input type="text" class="form-control" name="Name">
                                     </div>
                                 </div>
                                 <!-- Surname -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">นามสกุล</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Name"
-                                            value="Surname Test">
+                                        <input type="text" class="form-control" name="Surname">
                                     </div>
                                 </div>
                                 <!-- Faculty -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">คณะ/สาขา</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Faculty"
-                                            value="Faculty Test">
+                                        <input type="text" class="form-control" name="Faculty">
                                     </div>
                                 </div>
                                 <!-- Year -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">ปีการศึกษา</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Year"
-                                            value="Year Test">
+                                        <input type="text" class="form-control" name="Year">
                                     </div>
                                 </div>
                                 <!-- Subject -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">รายวิชาที่ยื่น</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Subject"
-                                            value="Subject Test">
+                                        <select name="Subject" name="Subject"
+                                        class="form-control custom-select bg-white border-md">
+                                        <option selected>TEST</option>
+                                        <option>TOEFL Paper-based test</option>
+                                        <option>TOEFL Internet-based test</option>
+                                        <option>TOEFL Computer-based test</option>
+                                        <option>IELTS</option>
+                                        <option>CU-TEP</option>
+                                        <option>TU-GET</option>
+                                        <option>RT-TEP</option>
+                                        <option>TOEIC</option>
+                                        <option>TELL ME MORE (Placement/progress Test)</option>
+                                        <option>TELL ME MORE (Achievement Test)</option>
+                                        <option>Common European Framework of Reference (CEFR)</option>
+                                        <option>Standardized Test score of the Faculty of Liberal Arts COE
+                                        </option>
+                                    </select>
                                     </div>
                                 </div>
                                 <!-- Score -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">ผลคะแนน</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Score"
-                                            value="Score Test">
+                                        <input type="text" class="form-control" name="Score">
                                     </div>
                                 </div>
                                 <!-- DateCert -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">วันที่ออกใบประกาศ</label>
                                     <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="DateCert"
-                                            value="DateCert Test">
+                                        <input type="text" class="form-control" name="Certdate">
                                     </div>
                                 </div>
-                                <a href="/editdata.html"><button type="button"
-                                        class="btn btn-primary btn-sm btn-block">แก้ไขข้อมูล</button></a>
+                                <button style="margin-bottom: 10px;" type="button" onclick="EditAlert()"
+                                    class="btn btn-primary btn-sm btn-block">ตกลง</button>
+                                <a href="/waiting.html"><button type="button"
+                                        class="btn btn-secondary btn-sm btn-block">ยกเลิก</button></a>
                             </div>
                             <div class="col-md-6">
-                                <div class="imgwaiting">
-                                    <img src="/img/waiting.svg">
+                                <div class="imgeditdata">
+                                    <img src="/img/edit.jpg">
                                 </div>
                             </div>
                         </div>
@@ -142,6 +152,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script>
+        function EditAlert() {
+            Swal.fire({
+                title: 'แก้ไขข้อมูลสำเร็จ',
+                text: 'กรุณารอการตรวจสอบจากเจ้าหน้าที่',
+                icon: 'success',
+                confirmButtonText: 'ตกลง'
+            }).then((result) => {
+                if (result.value) {
+                    window.location.href = "waiting.html"
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>

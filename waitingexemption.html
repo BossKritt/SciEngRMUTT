@@ -25,7 +25,7 @@
     <nav class="navbar sticky-top navbar-light bg-white">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/score.html"><i class="fas fa-angle-left"></i>
+                <a class="nav-link" href="/exemption.html"><i class="fas fa-angle-left"></i>
                     Back
                 </a>
             </li>
@@ -51,46 +51,6 @@
                                     <h6 style="text-align: center; margin-bottom: 30px;">SCI ENG RMUTT</h6>
                                 </div>
                                 <h3 style="text-align: center;">รอผลการตรวจสอบ</h3><br>
-                                <!-- StudentID -->
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">รหัสนักศึกษา</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="StudentID"
-                                            value="Student ID Test">
-                                    </div>
-                                </div>
-                                <!-- Name -->
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">ชื่อ</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Name"
-                                            value="Name Test">
-                                    </div>
-                                </div>
-                                <!-- Surname -->
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">นามสกุล</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Name"
-                                            value="Surname Test">
-                                    </div>
-                                </div>
-                                <!-- Faculty -->
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">คณะ/สาขา</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Faculty"
-                                            value="Faculty Test">
-                                    </div>
-                                </div>
-                                <!-- Year -->
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">ปีการศึกษา</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" readonly class="form-control-plaintext" name="Year"
-                                            value="Year Test">
-                                    </div>
-                                </div>
                                 <!-- Subject -->
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">รายวิชาที่ยื่น</label>
@@ -115,7 +75,23 @@
                                             value="DateCert Test">
                                     </div>
                                 </div>
-                                <a href="/editdata.html"><button type="button"
+                                <!-- Exemption -->
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">รายวิชาที่ขอยกเว้นและได้รับคะแนน A</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" readonly class="form-control-plaintext" name="SubjectExempted[]"
+                                            value="Exemption Test">
+                                    </div>
+                                </div>
+                                <!-- Semester/Year -->
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">ภาคการศึกษา/ปีการศึกษา</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" readonly class="form-control-plaintext" name="SubjectExempted[]"
+                                            value="Semester/Year Test">
+                                    </div>
+                                </div>
+                                <a href="/editdataexemption.html"><button type="button"
                                         class="btn btn-primary btn-sm btn-block">แก้ไขข้อมูล</button></a>
                             </div>
                             <div class="col-md-6">

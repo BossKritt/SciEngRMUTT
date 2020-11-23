@@ -50,26 +50,17 @@
                                     <a href="/index.html"><img src="/img/dictionary.png"></a>
                                     <h6 style="text-align: center; margin-bottom: 30px;">SCI ENG RMUTT</h6>
                                 </div>
-                                <h3 style="text-align: center;">ยื่นผลคะแนนภาษาอังกฤษสำหรับจบการศึกษา</h3><br>
+                                <h3 style="text-align: center;">แบบขอยกเว้นการเรียน</h3>
+                                <h3 style="text-align: center;">รายวิชาภาษาอังกฤษในหมวดศึกษาทั่วไป</h3><br>
                                 <!-- Subject -->
                                 <div class="form-group">
                                     <label>วิชาที่ต้องการยื่น</label>
                                     <select name="Subject" name="Subject"
                                         class="form-control custom-select bg-white border-md">
                                         <option selected>กรุณาเลือกรายวิชาที่ต้องการยื่นผลคะแนน</option>
-                                        <option>TOEFL Paper-based test</option>
-                                        <option>TOEFL Internet-based test</option>
-                                        <option>TOEFL Computer-based test</option>
-                                        <option>IELTS</option>
-                                        <option>CU-TEP</option>
-                                        <option>TU-GET</option>
-                                        <option>RT-TEP</option>
-                                        <option>TOEIC</option>
-                                        <option>TELL ME MORE (Placement/progress Test)</option>
-                                        <option>TELL ME MORE (Achievement Test)</option>
-                                        <option>Common European Framework of Reference (CEFR)</option>
-                                        <option>Standardized Test score of the Faculty of Liberal Arts COE
-                                        </option>
+                                        <option value="1">TOEIC</option>
+                                        <option value="2">TOEFL (iBT)</option>
+                                        <option value="4">IELTS</option>
                                     </select>
                                 </div>
                                 <!-- Score -->
@@ -88,11 +79,67 @@
                                     <label>วันที่ออกใบประกาศ</label>
                                     <input type="text" class="form-control" name="DateCert">
                                 </div>
-                                <button type="button" onclick="ScoreAlert()"
+                                <!-- Score Criteria -->
+                                <label>เกณฑ์คะแนนสอบที่ได้รับการยกเว้น</label>
+                                <table class="table">
+                                    <thead style="text-align: center;" class="thead-dark">
+                                        <tr>
+                                            <th scope="col">TOEIC</th>
+                                            <th scope="col">TOEFL (iBT)</th>
+                                            <th scope="col">IELTS</th>
+                                            <th scope="col">รายวิชาที่ได้รับคะแนน A</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>>= 400</td>
+                                            <td>>= 32</td>
+                                            <td>>= 4.5</td>
+                                            <td>01-320-001 ภาษาอังกฤษเพื่อการสื่อสาร 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>>= 500</td>
+                                            <td>>= 35</td>
+                                            <td>>= 5.0</td>
+                                            <td>01-320-001 ภาษาอังกฤษเพื่อการสื่อสาร 1<br>01-320-002
+                                                ภาษาอังกฤษเพื่อการสื่อสาร 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>>= 550</td>
+                                            <td>>= 46</td>
+                                            <td>>= 5.5</td>
+                                            <td>01-320-001 ภาษาอังกฤษเพื่อการสื่อสาร 1<br>01-320-002
+                                                ภาษาอังกฤษเพื่อการสื่อสาร 2<br>01-320-003 สนทนาภาษาอังกฤษ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- Exemption -->
+                                <div class="form-group">
+                                    <label>รายวิชาที่ขอยกเว้นและได้รับคะแนน A</label><br>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="SubjectExempted[]">
+                                        01-320-001 ภาษาอังกฤษเพื่อการสื่อสาร 1
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="SubjectExempted[]">
+                                        01-320-002 ภาษาอังกฤษเพื่อการสื่อสาร 2
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="SubjectExempted[]">
+                                        01-320-003 สนทนาภาษาอังกฤษ
+                                    </div>
+                                </div>
+                                <!-- Semester/Year -->
+                                <div class="form-group">
+                                    <label>ภาคการศึกษา/ปีการศึกษา</label>
+                                    <input type="text" class="form-control" placeholder="เช่น 1/2563"
+                                        name="Semester/Year">
+                                </div>
+                                <button type="button" onclick="ExemptionAlert()"
                                     class="btn btn-primary btn-sm btn-block">ตกลง</button>
                             </div>
                             <div class="col-md-6">
-                                <div class="imgscore">
+                                <div class="imgexemption2">
                                     <img src="/img/score.jpg">
                                 </div>
                             </div>
@@ -121,7 +168,7 @@
     <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <script>
-        function ScoreAlert() {
+        function ExemptionAlert() {
             Swal.fire({
                 title: 'บันทึกผลคะแนนสำเร็จ',
                 text: 'กรุณารอการตรวจสอบจากเจ้าหน้าที่',
@@ -129,7 +176,7 @@
                 confirmButtonText: 'ตกลง'
             }).then((result) => {
                 if (result.value) {
-                    window.location.href = "waiting.html"
+                    window.location.href = "waitingexemption.html"
                 }
             })
         }

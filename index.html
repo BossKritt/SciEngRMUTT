@@ -22,7 +22,7 @@
 
 <body>
     <!-- Nav -->
-    <nav class="navbar sticky-top navbar-light bg-transparent">
+    <nav class="navbar sticky-top navbar-light bg-white">
         <a class="navbar-brand" href="">
             <img src="/img/dictionary.png" width="30" height="30" class="d-inline-block align-top" alt=""
                 loading="lazy">
@@ -45,56 +45,75 @@
                         <form>
                             <h5>กรุณากรอกข้อมูล</h5><br>
                             <div class="form-row">
+                                <!-- StudentID -->
                                 <div class="input-group mb-3 col-md-12">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-id-badge"></i></span>
                                     </div>
                                     <input type="text" class="form-control" placeholder="รหัสนักศึกษา (มีขีด)"
-                                        id="UserID">
+                                        name="StudentID">
                                 </div>
+                                <!-- Name -->
                                 <div class="input-group mb-3 col-md-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="ชื่อ" id="Name">
+                                    <input type="text" class="form-control" placeholder="ชื่อ" name="Name">
                                 </div>
+                                <!-- Surname -->
                                 <div class="input-group mb-3 col-md-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="นามสกุล" id="Lastname">
+                                    <input type="text" class="form-control" placeholder="นามสกุล" name="Surname">
                                 </div>
+                                <!-- Gender -->
+                                <div class="input-group mb-3 col-md-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                                    </div>
+                                    <select name="Gender" name="Gender"
+                                        class="form-control custom-select bg-white border-md">
+                                        <option value="">เพศ</option>
+                                        <option value="Male">ชาย</option>
+                                        <option value="Female">หญิง</option>
+                                    </select>
+                                </div>
+                                <!-- Email -->
                                 <div class="input-group mb-3 col-md-12">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="อีเมล์" id="Email">
+                                    <input type="text" class="form-control" placeholder="อีเมล์" name="Email">
                                 </div>
+                                <!-- Tel -->
                                 <div class="input-group mb-3 col-md-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="เบอร์โทร" id="Tel">
+                                    <input type="text" class="form-control" placeholder="เบอร์โทร" name="Tel">
                                 </div>
+                                <!-- Year -->
                                 <div class="input-group mb-3 col-md-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-id-badge"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="ปีการศึกษาเช่น 2561"
-                                        id="Year">
+                                    <input type="text" class="form-control" placeholder="ปีการศึกษาเช่น 2561" name="Year">
                                 </div>
+                                <!-- Password -->
                                 <div class="input-group mb-3 col-md-12">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="รหัสผ่าน" id="Password">
+                                    <input type="password" class="form-control" placeholder="รหัสผ่าน" name="Password">
                                 </div>
                             </div>
+                            <!-- Faculty -->
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-building"></i></span>
                                 </div>
-                                <select class="custom-select" id="Faculty">
+                                <select class="custom-select" name="Faculty">
                                     <option selected>คณะ/สาขา</option>
                                     <option value="1">วิทยาศาสตร์และเทคโนโลยี/คณิตศาสตร์</option>
                                     <option value="2">วิทยาศาสตร์และเทคโนโลยี/เคมี</option>
@@ -123,7 +142,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
