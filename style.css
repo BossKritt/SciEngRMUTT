@@ -9,6 +9,20 @@ body {
   margin-right: 20px;
 }
 
+.login,
+.index,
+.card-main,
+.score,
+.waiting,
+.editdata,
+.exemption,
+.waitingexemption,
+.editdataexemption {
+  width: 70%;
+  margin: 5% auto;
+  background-color: white;
+}
+
 .main {
   text-align: center;
 }
@@ -152,4 +166,10 @@ body {
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+button.btn {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
